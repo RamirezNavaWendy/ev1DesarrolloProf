@@ -1,0 +1,85 @@
+.background {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/fotos-premium/tesoros-arqueologicos-reliquias-antiguas-fondo_670382-198590.jpg');
+    background-size:cover;
+    /* Ajusta la imagen al tamaño de la pantalla */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+.table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    backdrop-filter: blur(10px); /* Aplica el desenfoque al fondo */
+    background: none; /* Sin fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para destacar la tabla */
+    color: white; /* Texto blanco */
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Bordes suaves y blancos */
+    background: none; /* Sin fondo en celdas */
+    backdrop-filter: blur(5px); /* Desenfoque en las celdas */
+    color: white;
+}
+
+.table th {
+    background: none; /* Sin fondo en encabezados */
+    font-weight: bold;
+    border-bottom: 2px solid rgba(255, 215, 0, 0.5); /* Línea dorada tenue */
+}
+
+.table tr:hover {
+    background: none; /* Sin fondo en hover */
+}
+
+input {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    /* Bordes redondeados para botones */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* Transición suave */
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    /* Color de fondo para botón de seleccionar */
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    /* Color de fondo para botón de eliminar */
+    color: white;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    /* Color de fondo para botón agregar */
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    /* Color de fondo para botón modificar */
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    /* Efecto de opacidad al pasar el mouse */
+}

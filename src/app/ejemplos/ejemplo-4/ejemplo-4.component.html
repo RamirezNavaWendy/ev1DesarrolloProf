@@ -1,0 +1,28 @@
+<div style="margin: 20px;">
+    <h1>Ejemplo Formularios Reactivos</h1>
+    <h2>Lista de Tareas</h2>
+  
+  
+    <div class="col-sm-2">Tarea:
+      <input type="text" class="formControl" [formControl]="tarea"/>
+    </div>
+  
+    <p>
+      <button type="button" class="btn btn-primary"
+      (click)="agregarTarea()">Agregar</button>
+    </p>
+  
+    <ol>
+      @for(tar of listaTareas;track $index){
+        <li>
+          {{ tar }} <a (click)="borrarTarea($index)" href="#">Borrar?</a>
+        </li>
+      }
+    </ol>
+  
+    <p>
+      <button type="button" class="btn btn-danger" (click)="borrarTareas()">
+        Borrar Todas</button>
+    </p>
+    
+  </div>

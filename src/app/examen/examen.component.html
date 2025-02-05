@@ -1,0 +1,45 @@
+<div class="background">
+    <div style="margin: 20px; text-align: center;">
+        <h1>Mercado de reliquias online</h1>@if(listaProductos.length>0){<table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre del artículo</th>
+              <th>Descripcion</th>
+              <th>Lugar de procedencia</th>
+              <th>Materiales</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Seleccionar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>@for(producto of listaProductos;track producto.id){<tr>
+              <td>{{producto.id}}</td>
+              <td>{{producto.nombre}}</td>
+              <td>{{producto.descripcion}}</td>
+              <td>{{producto.lugar}}</td>
+              <td>{{producto.material}}</td>
+              <td>{{producto.categoria}}</td>
+              <td>{{producto.precio}}</td>
+              <td><button type="button" class="btn btn-warning" (click)="seleccionarProducto(producto)">Seleccionar</button>
+              </td>
+              <td><button type="button" class="btn btn-danger" (click)="eliminarProducto(producto.id)">Eliminar</button></td>
+            </tr>}</tbody>
+        </table>} @else {<h3>NO HAY PRODUCTOS</h3>}<div>
+            <p>ID: <input type="number" class="form-control" [(ngModel)]="producto.id" /></p>
+            <p>Nombre: <input type="text" class="form-control" [(ngModel)]="producto.nombre" /></p>
+            <p>Descripción: <input type="text" class="form-control" [(ngModel)]="producto.descripcion" /></p>
+            <p>Lugar: <input type="text" class="form-control" [(ngModel)]="producto.lugar" /></p>
+            <p>Material: <input type="text" class="form-control" [(ngModel)]="producto.material" /></p>
+            <p>Categoría: <input type="text" class="form-control" [(ngModel)]="producto.categoria" /></p>
+            <p>Precio: <input type="number" class="form-control" [(ngModel)]="producto.precio" /></p>
+            
+            <p>
+              <button type="button" class="btn btn-primary" (click)="agregarProducto()">Agregar</button>
+              <button type="button" class="btn btn-success" (click)="modificarProducto()">Modificar</button>
+            </p>
+                        
+        </div>
+      </div>
+</div>
